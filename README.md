@@ -1,4 +1,3 @@
-
 # Object Detection-project
 ## Aim
 To write a python program using OpenCV to do the following image manipulations.
@@ -55,7 +54,7 @@ import matplotlib.pyplot as plt
 
 
 # Read the image and convert the image into RGB
-image_path = 'dog.jpg'
+image_path = 'taj.jpg'
 img = cv2.imread(image_path)
 img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
@@ -125,7 +124,7 @@ model=cv2.dnn_DetectionModel(frozen_model,config_file)
 
 # Create a classLabel and print the same
 classLabels = []
-file_name='Labels.txt'
+file_name='text.txt'
 with open(file_name,'rt')as fpt:
     classLabels=fpt.read().rstrip('\n').split('\n')
 
@@ -135,7 +134,7 @@ print(classLabels)
 print(len(classLabels))
 
 # Display the image using imshow()
-img=cv2.imread('download.jpeg')
+img=cv2.imread('car.jpeg')
 plt.imshow(img)
 
 plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
@@ -162,15 +161,24 @@ for ClassInd,conf,boxes in zip(ClassIndex.flatten(),confidence.flatten(),bbox):
 plt.imshow(cv2.cvtColor(img,cv2.COLOR_BGR2RGB))
 ```
 ## I)Perform ROI from an image:
-![image](https://github.com/user-attachments/assets/11627702-9190-4884-af45-77c41e59f524)
-![image](https://github.com/user-attachments/assets/56ea969f-2059-454b-9185-9bde1298dff5)
+
+![Screenshot 2025-05-27 222910](https://github.com/user-attachments/assets/d2c3f287-d19b-49c3-9647-4713ee11d31f)
+
+![Screenshot 2025-05-27 222917](https://github.com/user-attachments/assets/468e0678-8be2-4093-b525-263a9af9a3c9)
+
+
+
+
+
 
 ## II)Perform handwritting detection in an image:
-![image](https://github.com/user-attachments/assets/66b135af-5b6f-4678-8933-abe1ccd75e7a)
+
+![Screenshot 2025-05-27 220735](https://github.com/user-attachments/assets/a90ee497-42c7-4763-be90-e90088da8d24)
 
 ## III)Perform object detection with label in an image:
+![Screenshot 2025-05-27 220918](https://github.com/user-attachments/assets/5fc47c89-0c30-438c-becf-17374f458923)
 
-![image](https://github.com/swethamohanraj/project/assets/94228215/3e4a66ff-a37e-45b2-be39-1ddb487d19a4)
+
 ## Result :
 Thus a python program using OpenCV is written to do the following image manipulations:
 
